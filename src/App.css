@@ -1,7 +1,17 @@
 .App {
   text-align: center;
 }
+.app{
+  background: url(https://i.ibb.co/hs9L3Dt/2154cd17b398cf202ab361615fe313af.jpg) no-repeat;
+ background-size: cover;
+ font-family: "Jost", sans-serif;
+}
 
+.app{
+  
+    
+  
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

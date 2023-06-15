@@ -29,7 +29,7 @@ const ServicesSection = () => {
     ]
     return (
       
-        <div className='mt-16'>
+        <div className='mt-16' data-aos="zoom-in-up">
             <div className='text-center'>
                 <h3 className='text-primary uppercase font-semibold text-xl'>OUR SERVICES</h3>
                 <h2 className='text-3xl font-medium'>Services We Provide</h2>

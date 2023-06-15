@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import toast from 'react-hot-toast';
+import Swal from "sweetalert2";
 import {  Link, useNavigate,  } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import useToken from '../../Hook/useToken';
@@ -11,10 +11,13 @@ const Register = () => {
     const [signupError, setSignupError]= useState('')
     const [createUserEmail, setCreateUserEmail ]=useState('')
     const [token]=useToken(createUserEmail)
-
+    const reload=()=>{
+        window.location.reload();
+       }
    const navigate=useNavigate()
    if(token){
     navigate('/')
+    reload()
    }
 
     const onSubmit=(data)=>{
@@ -25,7 +28,11 @@ const Register = () => {
             const user= result.user
             console.log(user);
            
-            toast.success('Account Create Successfully !')
+            Swal.fire(
+                "Succesfuly Login Done !",
+                "You clicked the button!",
+                "success"
+              );
             const profile={
                 displayName : data.name
             }
@@ -40,6 +47,11 @@ const Register = () => {
         .catch(e=>{
             console.log(e);
             setSignupError(e.message)
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!",
+              });
         })
     }
 
@@ -63,7 +75,8 @@ const Register = () => {
     
   
     return (
-        <div className='h-[500px] flex justify-center items-center'>
+        <div className='h-[500px] flex justify-center items-center'  data-aos="fade-up"
+        data-aos-duration="3000">
         <div className='w-96 p-8'>
             <h2 className='text-xl text-center'>Sign Up</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -73,7 +86,7 @@ const Register = () => {
                     <label className="label"> <span className="label-text">Name</span></label>
                     <input type="text"
                     
-                    {...register('name', {required: 'Name must be required'}
+                    {...register('name', {required: true }
                     
                     )}
                      className="input input-bordered w-full max-w-xs" />
@@ -97,13 +110,7 @@ const Register = () => {
                     <label className="label"> <span className="label-text">Password</span></label>
                     <input type="password" 
                  
-                 {...register("password", {required:'Give me Password',
-                 minLength: {value: 6 , message: 'password must be six character'},
-        pattern: {value : /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/ , message: 'password must be strong'}
-                }
-                
-                 
-                 )}
+                 {...register("password", {required:true} )}
                      className="input input-bordered w-full max-w-xs" />
                       { errors.password && <p className='text-red-600'> {errors.password.message}</p> }
                   
@@ -113,9 +120,9 @@ const Register = () => {
                         signupError&& <p className='text-red-600'>{signupError}</p>
                     }
                 </div>
-                <input className='btn btn-accent w-full text-white mt-3' value="Register" type="submit" />
+                <input className='btn btn-primary w-full text-white mt-3' value="Register" type="submit" />
             </form>
-            <p className='text-center'>Already Have an account? <Link to={'/login'}className='text-primary'>Please Login</Link></p>
+            <p className='text-center mt-2'>Already Have an account? <Link to={'/login'} className=' text-blue-600'><span className='font-bold'>Please Login</span></Link></p>
             <div className="divider">OR</div>
             <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
         </div>

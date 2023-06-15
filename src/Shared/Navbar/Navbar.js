@@ -8,7 +8,7 @@ const Navbar = () => {
     const menuItems = <React.Fragment>
         <li><Link to={'/'}>Home</Link></li>
         <li><Link to={'/appointment'}>Appointment</Link></li>
-        <li><Link to={'/about'}>About</Link></li>
+       
      
        {
         user?.uid ? <>
@@ -21,7 +21,7 @@ const Navbar = () => {
     </React.Fragment>
     return (
         <div>
-            <div className="navbar bg-base-100 flex justify-between">
+            <div className="navbar  flex justify-between font-semibold ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -31,7 +31,10 @@ const Navbar = () => {
                            {menuItems}
                         </ul>
                     </div>
+                    <div className='flex'>
+                        <img src='https://i.ibb.co/pxFr7kR/ezgif-com-gif-maker-removebg-preview.png' alt='' className='w-11'></img>
                     <Link  to={'/'} className="btn btn-ghost normal-case text-xl">Doctor </Link>
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">

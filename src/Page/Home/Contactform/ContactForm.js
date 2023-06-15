@@ -5,14 +5,19 @@ import appoiment from '../../../assets/images/appointment.png'
 const ContactForm = () => {
 
     return (
-        <section className='h-[604px] flex justify-center items-center'
+        <section className='h-[604px] flex justify-center items-center rounded-lg'
         style={{
-            background:`url(${appoiment})`
+            background:`url(https://i.ibb.co/4tcrHF1/pngtree-female-doctor-minimae-66164.jpg)`,
+            backgroundSize:"cover",
+            
+
         }}
+        data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom"
         >
                <div>
                 <div className='text-center'>
-                <h1 className='text-xl font-bold text-primary'>Contact Us</h1>
+                <h1 className='text-xl font-bold text-black'>Contact Us</h1>
                 <h3 className='text-lg text-white'>Stay connected with us</h3>
                 </div>
   <div className="block p-6 px-5 rounded-lg  w-96 ">

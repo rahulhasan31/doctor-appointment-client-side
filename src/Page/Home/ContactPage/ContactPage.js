@@ -29,7 +29,7 @@ const ContactPage = () => {
         },
     ]
     return (
-        <div className='grid mt-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 text-white '>
+        <div className='grid mt-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 text-white ' data-aos="flip-down">
             {
                 cardData.map(card => <ContactCard key={card.id}
                     card={card}></ContactCard>)

@@ -15,7 +15,7 @@ const DashBoardLayout = () => {
           
      <div>
         <Navbar></Navbar>
-        <div className="drawer drawer-mobile">
+        <div className="drawer drawer-mobile p-5 ">
 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
 <div className="drawer-content  ">
 <Outlet></Outlet>
@@ -24,9 +24,9 @@ const DashBoardLayout = () => {
 </div> 
 <div className="drawer-side">
 <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-<ul className="menu p-4 w-80 bg-base-100 text-base-content">
+<ul className="menu p-4 w-80 bg-sky-300  shadow-xl rounded-lg text-2xl font-semibold mr-5">
  
-  <Link to={'/dashboard'}>My Appointments</Link>
+  <Link  to={'/dashboard'}>My Appointments</Link>
 {
   isAdmin && <> 
    <Link to={'/dashboard/users'}>All Users</Link>

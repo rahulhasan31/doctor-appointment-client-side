@@ -21,8 +21,8 @@ const BannerTwo = () => {
 
 <div className="hero mt-5">
   <div className="hero-content flex-col lg:flex-row">
-    <img src={treat} className="w-[448px] rounded-lg shadow-2xl" />
-    <div>
+    <img alt='' src='https://i.ibb.co/Z8XmSpy/bringing-child-hospital-appointment-flat-color-vector-illustration-mother-father-presenting-during-c.webp' className="w-[448px] rounded-lg " data-aos="zoom-out" />
+    <div  data-aos="zoom-out-up">
       <h1 className="text-5xl font-bold">Exceptional Dental Care,
       <br /> on Your Terms</h1>
       <p className="py-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letters,as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page</p>

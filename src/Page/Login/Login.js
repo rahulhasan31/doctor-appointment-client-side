@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Link,  useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import useToken from '../../Hook/useToken';
+
+import Swal from 'sweetalert2'
 
 const Login = () => {
  const { register,formState: { errors }, handleSubmit } = useForm();
@@ -27,18 +29,30 @@ const Login = () => {
     .then(result=>{
         const user=result.user
         console.log(user)
+        
         setLoginUserEmail(data.email)
+        Swal.fire(
+            "Succesfuly Login Done !",
+            "You clicked the button!",
+            "success"
+          );
        
     })
     .catch(e=>{
         console.log(e.message)
         setLoginError(e.message)
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
     
     })
    }
 
     return (
-        <div className='h-[500px] flex justify-center items-center'>
+        <div className='h-[500px] flex justify-center items-center'  data-aos="fade-up"
+        data-aos-duration="3000">
             <div className='w-96 p-8'>
                 <h2 className='text-xl text-center'>Login</h2>
                 <form onSubmit={handleSubmit(handleLogin)}>
@@ -69,15 +83,15 @@ const Login = () => {
                     </div>
                         <label className="label"> <span className="label-text">Forget Password</span></label>
                     </div>
-                    <input className='btn btn-accent w-full text-white' value="Login" type="submit" />
+                    <input className='btn btn-primary w-full text-white' value="Login" type="submit" />
                    
                 </form>
-                <p className='text-center'>New to Doctors Portal? <Link to={'/register'}className='text-primary'>Create new account</Link></p>
+                <p className='text-center mt-2'>New to Doctors Portal? <Link to={'/register'} className=' text-black'><span className='font-bold'>Create new account</span></Link></p>
                 <div className="divider">OR</div>
                 <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
             </div>
             <div>
-
+            
             </div>
         </div>
     );

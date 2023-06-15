@@ -14,70 +14,83 @@ import AddDoctor from "../Layout/AddDoctor/AddDoctor";
 import ManageDoctors from "../Shared/DashBoard/ManageDoctors/ManageDoctors";
 import Payment from "../Shared/DashBoard/Payment/Payment";
 import DisplayError from "../Shared/DisplayError/DisplayError";
-
+import ChatAi from "../ChatAi/ChatAi";
 
 const { createBrowserRouter } = require("react-router-dom");
 
- const router= createBrowserRouter([
-    {
-        path: '/',
-        element: <Main></Main>,
-        errorElement: <DisplayError></DisplayError>,
-        children: [
-         
-            {
-                path : '/',
-                element: <Home></Home>
-            },
-            {
-                path: '/login',
-                element:<Login></Login>
-            },
-            {
-                path: '/register',
-                element: <Register></Register>
-            },
-        {
-            path:'/appointment',
-            element : <Appointment></Appointment>
-        },
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <DisplayError></DisplayError>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/chat",
+        element: <ChatAi></ChatAi>,
+      },
+      {
+        path: "/appointment",
+        element: <Appointment></Appointment>,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <DashBoardLayout></DashBoardLayout>
+      </PrivateRoute>
+    ),
+    errorElement: <DisplayError></DisplayError>,
+    children: [
+      {
+        path: "/dashboard",
+        element: <MyAppointment></MyAppointment>,
+      },
+      {
+        path: "/dashboard/users",
+        element: (
+          <AdminRoute>
+            <AllUsers></AllUsers>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/adddoctor",
+        element: (
+          <AdminRoute>
+            <AddDoctor></AddDoctor>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/managedoctors",
+        element: (
+          <AdminRoute>
+            <ManageDoctors></ManageDoctors>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/payment/:id",
+        element: <Payment></Payment>,
+        loader: ({ params }) =>
+          fetch(`https://doctor-server-phi.vercel.app/bookings/${params.id}`),
+      },
+    ],
+  },
+]);
 
-        ]
-    },
-    {
-        path: '/dashboard',
-        element:<PrivateRoute><DashBoardLayout></DashBoardLayout></PrivateRoute>,
-        errorElement: <DisplayError></DisplayError>,
-        children:[
-            {
-               path:'/dashboard',
-               element:<MyAppointment></MyAppointment>
-            },
-            {
-               path:'/dashboard/users',
-               element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
-            },
-            {
-               path:'/dashboard/adddoctor',
-               element:<AdminRoute><AddDoctor></AddDoctor></AdminRoute>
-            },
-            {
-               path:'/dashboard/managedoctors',
-               element:<AdminRoute><ManageDoctors></ManageDoctors></AdminRoute>
-            },
-            {
-               path:'/dashboard/payment/:id',
-               element:<Payment></Payment>,
-               loader:({params})=>fetch(`https://doctor-server-phi.vercel.app/bookings/${params.id}`)
-            },
-        ]            
-        
-    }
-])
-
-
-
-
-
-
-export default router ;
+export default router;

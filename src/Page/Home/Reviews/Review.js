@@ -4,7 +4,8 @@ const Review = ({ reviews }) => {
     const { name, img, review , location} = reviews
     return (
         <div>
-            <div className="card  shadow-xl">
+            <div className="card  shadow-xl border-t-2 border-l-2 border-red-500 hover:bg-teal-100" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
                 <div className="card-body">
                     <p>{review}</p>
                     <div className="flex items-center mt-6">
