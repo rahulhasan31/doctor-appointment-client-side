@@ -5,6 +5,7 @@ import navpic from "../assets/doctor/pngegg (5).png"
 const ExtraBanner = () => {
   return (
     <div className='max-w-[1440px] mt-16 mx-auto'>
+      {/*  Here is code pushhhhhhhhhhhhhhhhhhhhh */}
       <section>
         <div class="px-4  mx-auto max-w-7xl sm:px-6 md:px-12 ">
           <div class="flex flex-wrap items-center mx-auto max-w-7xl">
