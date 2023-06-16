@@ -8,7 +8,7 @@ const MakeAppointment = () => {
     <section
       className="mt-32 p-0"
       style={{
-        background: `url('https://osgoodepd.ca/wp-content/uploads/2022/03/iStock-1179610553-1-e1646406929549.jpg')`,
+        background: `url('https://i.ibb.co/MM37Gtt/istockphoto-1254842513-612x612.jpg')`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
