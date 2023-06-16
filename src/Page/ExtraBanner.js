@@ -6,6 +6,7 @@ const ExtraBanner = () => {
   return (
     <div className='max-w-[1440px] mt-16 mx-auto'>
       <section>
+        {/* ----------------  */}
         <div class="px-4  mx-auto max-w-7xl sm:px-6 md:px-12 ">
           <div class="flex flex-wrap items-center mx-auto max-w-7xl">
             <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
