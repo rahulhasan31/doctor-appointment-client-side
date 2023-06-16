@@ -14,6 +14,7 @@ import AddDoctor from "../Layout/AddDoctor/AddDoctor";
 import ManageDoctors from "../Shared/DashBoard/ManageDoctors/ManageDoctors";
 import Payment from "../Shared/DashBoard/Payment/Payment";
 import DisplayError from "../Shared/DisplayError/DisplayError";
+import OurDoctors from "../NewSections/OurDoctors/OurDoctors";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/appointment",
         element: <Appointment></Appointment>,
+      },
+      {
+        path: "/doctors",
+        element: <OurDoctors></OurDoctors>,
       },
     ],
   },
