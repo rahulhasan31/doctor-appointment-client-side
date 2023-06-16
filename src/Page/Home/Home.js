@@ -11,7 +11,7 @@ import Testimonials from './Testimonials/Testimonials';
 
 const Home = () => {
     return (
-        <div className='mx-5'>
+        <div className=' max-w-[1440px] mx-auto'>
             <ExtraBanner></ExtraBanner>
             <Banner></Banner>
             <ContactPage></ContactPage>

@@ -10,24 +10,24 @@ import 'aos/dist/aos.css';
 
 
 function App() {
-  const [isLoading, SetIsLoading]=useState(true)
+  const [isLoading, SetIsLoading] = useState(true)
 
-  useEffect(()=>{
-    setTimeout(()=>{
+  useEffect(() => {
+    setTimeout(() => {
       SetIsLoading(false)
     }, 2500)
-})
-AOS.init();
+  })
+  AOS.init();
   return (
-    <div className="max-w-[1440px] mx-auto  app "
-    
+    <div className="  app "
+
     >
-       {
-      isLoading?<MenuLoding></MenuLoding> : <RouterProvider router={router}>
-      
-      </RouterProvider>
-     }
-   
+      {
+        isLoading ? <MenuLoding></MenuLoding> : <RouterProvider router={router}>
+
+        </RouterProvider>
+      }
+
     </div>
   );
 }
