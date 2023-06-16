@@ -61,7 +61,7 @@ const Navbar = () => {
           </div>
           <div className="flex">
             <img
-              src="https://i.ibb.co/pxFr7kR/ezgif-com-gif-maker-removebg-preview.png"
+              src="https://i.ibb.co/3T2svVs/pngegg-14.png"
               alt=""
               className="w-11"
             ></img>
