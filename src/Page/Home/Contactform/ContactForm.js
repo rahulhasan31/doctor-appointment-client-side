@@ -1,14 +1,17 @@
-
-import React, { useState } from 'react';
-import appoiment from '../../../assets/images/appointment.png'
+import React, { useState } from "react";
+import appoiment from "../../../assets/images/appointment.png";
 
 const ContactForm = () => {
 
   return (
-    <section className='h-[604px] flex justify-center items-center rounded-lg'
+    <section className='h-[604px]  flex justify-center items-center rounded-lg '
+
+
       style={{
-        background: `url(https://i.ibb.co/4tcrHF1/pngtree-female-doctor-minimae-66164.jpg)`,
+        background: `url(https://i.ibb.co/StJX2FW/pngegg-r-8.png)`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
 
 
       }}
