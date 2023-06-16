@@ -71,8 +71,8 @@ const AddDoctor = () => {
     return <p>alu Loading......</p>;
   }
   return (
-    <div className="w-96 p-8">
-      <h2 className="text-4xl font-bold">Add a New Doctor</h2>
+    <div className="w-96 p-8 mx-auto">
+      <h2 className="text-4xl font-bold text-green-500">Add a New Doctor</h2>
       <form onSubmit={handleSubmit(handleAddDoctor)}>
         <div className="form-control w-full max-w-xs">
           <label className="label">
@@ -147,7 +147,7 @@ const AddDoctor = () => {
         </div>
         <div></div>
         <input
-          className="btn btn-accent w-full text-white mt-3"
+          className="btn border-none hover:bg-green-600 bg-green-500 w-full text-white mt-3"
           value="Add Doctor"
           type="submit"
         />

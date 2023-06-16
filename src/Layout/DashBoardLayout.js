@@ -114,7 +114,7 @@ function DashBoardLayout() {
             <nav className="flex flex-col mx-4 my-6 space-y-4 shadow-lg border border-green-500 h-screen px-8 py-5">
               <Link
                 to={"/dashboard"}
-                className={`inline-flex items-center py-3 hover:text-gray-400 hover:bg-green-700 focus:text-blue-600 focus:bg-white rounded-lg px-2 ${
+                className={`inline-flex items-center py-3 hover:text-gray-400  focus:text-blue-600 focus:bg-white rounded-lg px-2 ${
                   menu ? "justify-start" : "justify-center"
                 }`}
               >
@@ -130,7 +130,7 @@ function DashBoardLayout() {
                 <>
                   <Link
                     to={"/dashboard/users"}
-                    className={`inline-flex items-center py-3 text-blue-600 bg-white rounded-lg px-2 ${
+                    className={`inline-flex items-center py-3 focus:text-blue-600 focus:bg-white rounded-lg px-2 ${
                       menu ? "justify-start" : "justify-center"
                     }`}
                   >
@@ -144,7 +144,7 @@ function DashBoardLayout() {
                   </Link>
                   <Link
                     to={"/dashboard/adddoctor"}
-                    className={`inline-flex items-center py-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg px-2 ${
+                    className={`inline-flex items-center py-3 hover:text-gray-400   focus:text-blue-600 focus:bg-white rounded-lg px-2 ${
                       menu ? "justify-start" : "justify-center"
                     }`}
                   >
@@ -158,7 +158,7 @@ function DashBoardLayout() {
                   </Link>
                   <Link
                     to={"/dashboard/managedoctors"}
-                    className={`inline-flex items-center py-3 hover:text-gray-400 hover:bg-gray-700 focus:text-gray-400 focus:bg-gray-700 rounded-lg px-2 ${
+                    className={`inline-flex items-center py-3 hover:text-gray-400  focus:bg-white focus:text-blue-600  rounded-lg px-2 ${
                       menu ? "justify-start" : "justify-center"
                     }`}
                   >

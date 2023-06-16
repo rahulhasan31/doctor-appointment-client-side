@@ -18,7 +18,7 @@ const ContactPage = () => {
       name: "Visit our location",
       description: "Shalgariya Talbagan Pabna",
       icon: Marker,
-      bgClass: " bg-green-600",
+      bgClass: " bg-cyan-400",
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const ContactPage = () => {
   ];
   return (
     <div
-      className="grid mt-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 text-white "
+      className="grid mt-5 grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-6 text-white "
       data-aos="flip-down"
     >
       {cardData.map((card) => (

@@ -37,7 +37,7 @@ const AppointmentBanner = ({ selectedDate, setSelectedDate }) => {
                 Hello Dear{" "}
               </span>
               <h1 className="mb-8 text-4xl font-bold leading-none tracking-tighter text-neutral-600 md:text-7xl lg:text-5xl">
-                Thanks Dear , Please Book Your appointment
+                Please Book Your Doctor Appointment Thanks Dear
               </h1>
               <p className="mb-8 text-base leading-relaxed text-left text-gray-500">
                 We Are provide world top service
