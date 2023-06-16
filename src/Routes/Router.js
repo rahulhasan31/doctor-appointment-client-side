@@ -14,7 +14,6 @@ import AddDoctor from "../Layout/AddDoctor/AddDoctor";
 import ManageDoctors from "../Shared/DashBoard/ManageDoctors/ManageDoctors";
 import Payment from "../Shared/DashBoard/Payment/Payment";
 import DisplayError from "../Shared/DisplayError/DisplayError";
-import ChatAi from "../ChatAi/ChatAi";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -36,10 +35,9 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
-      {
-        path: "/chat",
-        element: <ChatAi></ChatAi>,
-      },
+      // {
+      //   path: "/chat",
+      // },
       {
         path: "/appointment",
         element: <Appointment></Appointment>,
