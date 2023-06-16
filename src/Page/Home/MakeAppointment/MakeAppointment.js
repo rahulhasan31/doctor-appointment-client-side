@@ -10,7 +10,9 @@ const MakeAppointment = () => {
       style={{
         background: `url('https://i.ibb.co/MM37Gtt/istockphoto-1254842513-612x612.jpg')`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        backgroundPosition: "center"
+
 
 
       }}
