@@ -31,6 +31,7 @@
     "react-loader-spinner": "^5.3.4",
     "react-marquee-slider": "^1.1.5",
     "react-query": "^3.39.3",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "sweetalert": "^2.1.2",
