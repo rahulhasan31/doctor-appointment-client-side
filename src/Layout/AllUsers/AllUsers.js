@@ -8,7 +8,7 @@ const AllUsers = () => {
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:3000/users");
+      const res = await fetch("https://doctor-server-phi.vercel.app/users");
       const data = await res.json();
       return data;
     },
@@ -36,7 +36,7 @@ const AllUsers = () => {
     const procced = window.confirm("Are Sure Delete your Toy?");
 
     if (procced) {
-      fetch(`http://localhost:3000/users/${id}`, {
+      fetch(`https://doctor-server-phi.vercel.app/users/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

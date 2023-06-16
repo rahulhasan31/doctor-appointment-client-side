@@ -72,16 +72,46 @@ function DashBoardLayout() {
             window.outerWidth > 768 ? "" : "hidden sm:flex sm:flex-col"
           }`}
         >
-          <Link className="inline-flex items-center justify-center h-20 w-full bg-blue-600 hover:bg-blue-500 focus:bg-blue-500">
+          <Link className="inline-flex items-center justify-center h-20 w-full shadow-lg border border-green-500 hover:bg-blue-500 focus:bg-blue-500  ">
             <span
-              className="text-white text-4xl ml-2"
+              className="text--500 text-4xl ml-2 mr-5"
               style={{ display: menu ? "block" : "none" }}
             >
-              Dashboard
+              DASHBOARD
             </span>
+            <button
+              className="text-gray-600 focus:outline-none"
+              onClick={toggleMenu}
+            >
+              {menu ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M3 5h18a1 1 0 010 2H3a1 1 0 010-2zm0 6h18a1 1 0 010 2H3a1 1 0 010-2zm0 6h18a1 1 0 010 2H3a1 1 0 010-2z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M19 5H5a1 1 0 00-1 1v1a1 1 0 001 1h14a1 1 0 001-1V6a1 1 0 00-1-1zM5 10a1 1 0 100 2h14a1 1 0 100-2H5zm14 4H5a1 1 0 00-1 1v1a1 1 0 001 1h14a1 1 0 001-1v-1a1 1 0 00-1-1z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              )}
+            </button>
           </Link>
           <div className="flex-grow flex flex-col justify-between text-gray-500 ">
-            <nav className="flex flex-col mx-4 my-6 space-y-4">
+            <nav className="flex flex-col mx-4 my-6 space-y-4 shadow-lg border border-green-500 h-screen px-8 py-5">
               <Link
                 to={"/dashboard"}
                 className={`inline-flex items-center py-3 hover:text-gray-400 hover:bg-green-700 focus:text-blue-600 focus:bg-white rounded-lg px-2 ${
@@ -163,39 +193,9 @@ function DashBoardLayout() {
           </div>
         </aside>
         <div className="flex flex-col flex-grow">
-          <header className="flex items-center justify-between p-4  border-b py-7">
-            <button
-              className="text-gray-600 focus:outline-none"
-              onClick={toggleMenu}
-            >
-              {menu ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M3 5h18a1 1 0 010 2H3a1 1 0 010-2zm0 6h18a1 1 0 010 2H3a1 1 0 010-2zm0 6h18a1 1 0 010 2H3a1 1 0 010-2z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M19 5H5a1 1 0 00-1 1v1a1 1 0 001 1h14a1 1 0 001-1V6a1 1 0 00-1-1zM5 10a1 1 0 100 2h14a1 1 0 100-2H5zm14 4H5a1 1 0 00-1 1v1a1 1 0 001 1h14a1 1 0 001-1v-1a1 1 0 00-1-1z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              )}
-            </button>
+          {/* <header className="flex items-center justify-between p-4   py-7">
             <div></div>
-          </header>
+          </header> */}
           <main className="flex-grow p-6 ">
             <Outlet></Outlet>
           </main>
