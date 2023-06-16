@@ -78,7 +78,7 @@ const OurTeam = () => {
             <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
               <img
                 className="absolute object-cover w-full h-full rounded"
-                src="https://i.ibb.co/ccg6F5j/353597386-651595820157567-3641991283250175456-n.jpg"
+                src="https://i.ibb.co/DzCYn8S/353626546-1368969134004164-1089956572763620051-n.jpg"
                 alt="Person"
               />
             </div>
