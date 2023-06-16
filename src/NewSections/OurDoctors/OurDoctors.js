@@ -7,7 +7,7 @@ const OurDoctors = () => {
   const { data: doctors = [], isLoading } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:3000/doctors");
+      const res = await fetch("https://doctor-server-phi.vercel.app/doctors");
       const data = await res.json();
       return data;
     },
