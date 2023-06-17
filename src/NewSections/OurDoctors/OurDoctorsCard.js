@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const OurDoctorsCard = ({ doctor }) => {
   console.log(doctor);
-  const { name, image, specialty } = doctor;
+  const { name, image, specialty, _id } = doctor;
   return (
     <a
       href="/"
@@ -16,9 +17,11 @@ const OurDoctorsCard = ({ doctor }) => {
             <h6 className="mb-2 font-semibold leading-5">{name}</h6>
             <p className="text-sm text-gray-900">MBBS (DMC), FCPS (CHILD)</p>
             <p className="text-sm text-gray-900">specialty: {specialty}</p>
-            <button className="mt-2 py-1 px-2 bg-green-500 rounded-md text-lg font-medium text-white flex justify-center items-center ml-12">
-              See Details
-            </button>
+            <Link to={`/doctors/${_id}`}>
+              <button className="mt-2 py-1 px-2 bg-green-500 rounded-md text-lg font-medium text-white flex justify-center items-center ml-12">
+                See Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>

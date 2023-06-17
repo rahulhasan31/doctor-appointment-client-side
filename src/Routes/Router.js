@@ -6,7 +6,7 @@ import Register from "../Page/Register/Register";
 
 import PrivateRoute from "../Private/PrivateRoute";
 import DashBoardLayout from "../Layout/DashBoardLayout";
-import DashBoard from "../Shared/DashBoard/DashBoard";
+
 import MyAppointment from "../Shared/DashBoard/MyAppointment/MyAppointment";
 import AllUsers from "../Layout/AllUsers/AllUsers";
 import AdminRoute from "../Private/AdminRoute/AdminRoute";
@@ -14,7 +14,8 @@ import AddDoctor from "../Layout/AddDoctor/AddDoctor";
 import ManageDoctors from "../Shared/DashBoard/ManageDoctors/ManageDoctors";
 import Payment from "../Shared/DashBoard/Payment/Payment";
 import DisplayError from "../Shared/DisplayError/DisplayError";
-import OurDoctors from "../NewSections/OurDoctors/OurDoctors";
+
+import Doctors from "../NewSections/Doctors/Doctors";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -42,8 +43,10 @@ const router = createBrowserRouter([
         element: <Appointment></Appointment>,
       },
       {
-        path: "/doctors",
-        element: <OurDoctors></OurDoctors>,
+        path: "/doctors/:id",
+        element: <Doctors></Doctors>,
+        loader: ({ params }) =>
+          fetch(`https://doctor-server-phi.vercel.app/doctors/${params.id}`),
       },
     ],
   },
